@@ -1,125 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crazy World — Music Player</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <div class="brand">
-      <div class="logo">CW</div>
-      <div class="brand-text">Crazy World</div>
-    </div>
-
-    <nav class="nav">
-      <button class="nav-item active" data-page="home" id="nav-home">Home</button>
-      <button class="nav-item" data-page="liked" id="nav-liked">Liked Songs <span id="liked-count" class="badge">0</span></button>
-
-      <div class="section-title">Playlists
-        <button id="addPlaylistBtn" class="small-btn">+</button>
-      </div>
-      <div id="playlistsList" class="list"></div>
-
-      <div class="section-title">Genres</div>
-      <div id="genresList" class="list"></div>
-
-      <div class="section-title" style="margin-top:15px;">
-        <button id="resetDataBtn" class="small-btn">Reset All Data</button>
-      </div>  
-      <br><br><br><br><br><br><br>
-      <p class="section-title">This Website is under develpoment. As soon as poosible We can complete, a user-friendly website built to make your experience effortless</p>
-      <p class="section-title">CrazyWorld Presents :</p>
-      <p class="section-title">New Song at Every Sunday 9:00PM</p>
-      <p class="section-title"><big>Coming soon</big><br></p><p class="section-title">@Prasanth</p>
-    </nav>    
-  </aside>
-
-  <!-- MAIN CONTENT -->
-  <main class="main">
-    <header class="topbar">
-      <h1 id="pageTitle">Home</h1>
-      <div class="top-controls">
-        <input id="searchBox" placeholder="Search songs, artists..." />
-      </div>
-    </header>
-
-    <!-- Pages -->
-    <section id="home" class="page active page-grid">
-      <div class="gemini_image" ><img src="assets\songs\new songs\Gemini_Generated_Image_smjejosmjejosmje.png" alt="Every Sunday Night 9:00PM IST A New Song is Realsing" width="600" height="160"> </div>
-      <div id="homeGrid" class="cards-grid"></div>
-    </section>
-
-    <section id="liked" class="page page-grid hidden">
-      <h2 class="section-title">Liked Songs</h2>
-      <div id="likedGrid" class="cards-grid"></div>
-    </section>
-
-    <section id="playlistPage" class="page page-grid hidden">
-      <div class="playlist-header">
-        <h2 class="section-title" id="playlistTitle">Playlist</h2>
-        <button id="deletePlaylistBtn" class="small-btn">Delete Playlist</button>
-      </div>
-      <div id="playlistGrid" class="cards-grid"></div>
-    </section>
-
-    <section id="genrePage" class="page page-grid hidden">
-      <h2 class="section-title" id="genreTitle">Genre</h2>
-      <div id="genreGrid" class="cards-grid"></div>
-    </section>
-  </main>
-
-  <!-- PLAYER FOOTER -->
-  <footer class="player">
-    <div class="player-left">
-      <img id="playerCover" class="player-cover" src="">
-      <div class="player-info">
-        <div id="playerTitle" class="player-title">Select a song</div>
-        <div id="playerArtist" class="player-artist">Artist</div>
-      </div>
-      <div class="player-like">
-        <button id="playerLikeBtn" class="icon-btn">♡</button>
-      </div>
-    </div>
-
-    <div class="player-center">
-      <div class="controls">
-        <button id="shuffleBtn" class="ctl" title="Shuffle">🔀</button>
-        <button id="prevBtn" class="ctl" title="Previous">⏮</button>
-        <button id="playBtn" class="ctl" title="Play">▶</button>
-        <button id="nextBtn" class="ctl" title="Next">⏭</button>
-        <button id="loopBtn" class="ctl" title="Loop">🔁</button>
-      </div>
-
-      <div class="progress-wrap">
-        <span id="curTime">0:00</span>
-        <input id="progress" type="range" min="0" max="100" value="0">
-        <span id="durTime">0:00</span>
-      </div>
-    </div>
-
-    <div class="player-right">
-      <input id="volume" type="range" min="0" max="1" step="0.01" value="1">
-    </div>
-
-    <audio id="audio"></audio>
-  </footer>
-
-  <!-- CREATE PLAYLIST MODAL -->
-  <div id="createPlaylistModal" class="modal hidden">
-    <div class="modal-content">
-      <h3>Create Playlist</h3>
-      <input id="newPlaylistName" placeholder="Playlist name" />
-      <div class="modal-actions">
-        <button id="createPlaylistConfirm" class="btn">Create</button>
-        <button id="createPlaylistCancel" class="btn alt">Cancel</button>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>crazyworld</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
